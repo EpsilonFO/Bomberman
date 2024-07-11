@@ -1,0 +1,14 @@
+main_server.o: main_server.c globals_serv.h ../client/globals_client.h \
+ ../client/ncurses.h requetes_from_serv.h ../client/ncurses.h
+game.o: game.c requetes_from_serv.h ../client/ncurses.h globals_serv.h \
+ ../client/globals_client.h ../client/ncurses.h
+add_to_game.o: add_to_game.c globals_serv.h requetes_from_serv.h \
+ ../client/ncurses.h ../client/globals_client.h ../client/ncurses.h
+launch_game.o: launch_game.c globals_serv.h ../client/ncurses.h
+player_ready.o: player_ready.c globals_serv.h requetes_from_serv.h \
+ ../client/ncurses.h
+manage_action.o: manage_action.c requetes_from_serv.h ../client/ncurses.h \
+ globals_serv.h ../client/globals_client.h ../client/ncurses.h
+bomb.o: bomb.c globals_serv.h
+send_chat.o: send_chat.c requetes_from_serv.h ../client/ncurses.h \
+ globals_serv.h ../client/globals_client.h ../client/ncurses.h

@@ -1,0 +1,21 @@
+main_client.o: main_client.c globals_client.h ncurses.h \
+ ../serveur/globals_serv.h ../serveur/requetes_from_serv.h \
+ ../serveur/../client/ncurses.h ../serveur/globals_serv.h \
+ connexion_client.h requetes_to_serv.h
+connexion_client.o: connexion_client.c globals_client.h ncurses.h \
+ requetes_to_serv.h ../serveur/globals_serv.h
+choose_mode.o: choose_mode.c globals_client.h ncurses.h \
+ requetes_to_serv.h
+abo_multidiff.o: abo_multidiff.c globals_client.h ncurses.h \
+ ../serveur/globals_serv.h requetes_to_serv.h
+update_grill.o: update_grill.c ncurses.h ../serveur/globals_serv.h \
+ globals_client.h
+move.o: move.c ncurses.h globals_client.h requetes_to_serv.h
+casemodifier.o: casemodifier.c ncurses.h ../serveur/globals_serv.h \
+ globals_client.h
+ready.o: ready.c globals_client.h ncurses.h requetes_to_serv.h
+killed.o: killed.c ../serveur/globals_serv.h globals_client.h ncurses.h \
+ requetes_to_serv.h
+end_game.o: end_game.c requetes_to_serv.h ../serveur/globals_serv.h \
+ ncurses.h globals_client.h
+ncurses.o: ncurses.c ncurses.h globals_client.h
