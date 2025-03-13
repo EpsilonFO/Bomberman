@@ -1,72 +1,64 @@
 
-# PROJET BOMBERMAN
+# BOMBERMAN PROJECT
 
-Voici un explication du fonctionnement de notre projet Bomberman.
+Here's an explanation of how our Bomberman project works.## Project structure
 
-## Structure du Projet
-
-Le projet est divisé en deux parties principales :
-- **Client** : Contient tout le code nécessaire pour l'interface client du jeu.
-- **Serveur** : Gère la logique du serveur pour le jeu.
+The project is divided into two main parts:
+- **Client** : Contains all the code needed for the game's client interface.
+- **Server** : Manages the server logic for the game.
 
 
 ## Compilation
 
-Le projet utilise un `Makefile` dans le répertoire racine qui invoque les `Makefile` dans les sous-dossiers `client` et `serveur`.
+The project uses a `Makefile` in the root directory which invokes the `Makefile` in the `client` and `server` sub-folders.
 
-1. Ouvrez un terminal dans le répertoire racine du projet.
-2. Exécutez la commande suivante pour compiler le projet :
-   ```bash
-   make
-   ```
+1. Open a terminal in the project root directory.
+2. Run the following command to compile the project:
+```bash
+make
+```
 
-## Lancement du Serveur
+## Launching the server
 
-Une fois la compilation terminée, vous pouvez lancer le serveur avec la commande suivante :
+Once compilation is complete, you can launch the server with the following command:
 
 ```bash
 make server_run
 ```
-et un client avec la commande suivante :
+and a client with the following command
 ```bash
 make client_run
 ```
 
-Assurez-vous que le serveur est en cours d'exécution avant de lancer les instances du client.
+Make sure the server is running before launching client instances.
 
-Les propriétés du jeu (nombre de joueurs dans une partie, dimensions de la grille) sont disponibles dans le fichier `serveur/globals_serv.h`.
+Game properties (number of players in a game, grid dimensions) are available in the file `serveur/globals_serv.h`.
 
-## Jouer
+## Play
 
-Lorsque le client se connecte, il doit entrer le mode de jeu qu'il souhaite rejoindre :
-- 1 - Mode Chacun pour soi
-- 2 - Mode 2v2
-- p ou P - Quitter la partie
+When the customer logs in, he/she must enter the game mode he/she wishes to join:
+- 1 - Every man for himself mode
+- 2 - 2v2 mode
+- p or P - Quit the game
 
-Une fois le choix fait, le client doit se déclarer prêt. Il a 60 secondes pour envoyer n'importe quel message avant de se faire sortir de la partie par le serveur.
-
-
-## Touches
-- **Se déplacer :** Flèches haut, bas, gauche, droite
-- **Poser une bombe :** F1
-- **Ecrire un message dans le tchat :** Ecrire son message
-- **Envoyer son message :** F4
+Once the choice has been made, the customer must declare himself ready. He has 60 seconds to send any message before the server exits the game.
 
 
-## Arrêt
+## Keys
+- **Move:** Arrows up, down, left, right
+- **Place bomb:** F1
+- **Write message in chat :** Write message
+- **Send message:** F4
 
-Pour arrêter le serveur ou un client, utilisez `Ctrl+C` dans les terminaux correspondants.
 
-## Plus d'Informations
+## Stop
 
-Voici les structures des 2 sous-dossiers du projet :
+To stop the server or a client, use `Ctrl+C` in the corresponding terminals.
+
+## More information
+
+Here are the structures of the 2 project subfolders:
 
 ![](architecture_client.png)
 
 ![](architecture_serveur.png)
-
-
-## Auteurs
-- Yanis ALLAL
-- Antony LEHMANN
-- Félix OLLIVIER
